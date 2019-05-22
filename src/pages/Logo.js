@@ -16,9 +16,10 @@ class LogoEdit extends React.Component {
         this.props.history.go(-1)
     }
     render(){
+        const {match: {params: {id}}} = this.props;
         return (
             <div>
-                {this.props.match.params.id}
+                {id}
                 <Button type="primary" onClick={this.goBack}>返回</Button>
             </div>
         )

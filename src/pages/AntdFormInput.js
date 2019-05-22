@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Button, AutoComplete, Checkbox, Cascader, DatePicker, InputNumber, Input, Select, Icon, Radio } from 'antd'
+import { Row, Col, Divider, Button, AutoComplete, Checkbox, Cascader, DatePicker, InputNumber, Input, Select, Icon, Radio, Switch, } from 'antd'
 import "antd/dist/antd.css";
 import moment from 'moment';
 
@@ -97,8 +97,67 @@ class AntdFormInput extends React.Component {
     }
     render() {
         const label = `${this.state.checkboxChecked ? 'Checked' : 'Unchecked'}-${this.state.checkboxDisabled ? 'Disabled' : 'Enabled'}`;
+        const radioStyle = {
+            display: 'block',
+            height: '30px',
+            lineHeight: '30px',
+        };
         return (
             <div>
+                <div className="antd-demo-box">
+                    <h1>综合练习</h1>
+                    <div className="antd-demo-content">
+                        <Row>
+                            <Col span={4}>
+                                多选框
+                            </Col>
+                            <Col span={8}>
+                                <Checkbox.Group name="FE" defaultValue={[2]} disabled={false} onChange={checkedValue => {console.log(checkedValue)}}>
+                                    <Checkbox value={1} autoFocus>
+                                        HTML
+                                    </Checkbox>
+                                    <Checkbox value={2} checked disabled={false}>
+                                        CSS
+                                    </Checkbox>
+                                    <Checkbox value={3} onChange={e => {console.log(e.target.value)}} defaultChecked={false}>
+                                        JavaScript
+                                    </Checkbox>
+                                </Checkbox.Group>
+                            </Col>
+                            <Col span={8}>
+                                <Checkbox.Group name="zuowu" defaultValue={[1,2,3]} onChange={checkedValue => {console.log(checkedValue);}}>
+                                    <Checkbox value={1}>水稻</Checkbox>
+                                    <Checkbox value={2}>玉米</Checkbox>
+                                    <Checkbox value={2}>大豆</Checkbox>
+                                </Checkbox.Group>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={4}>
+                                单选框
+                            </Col>
+                            <Col span={8}>
+                                <Radio.Group size="small" buttonStyle="solid" defaultValue={0}>
+                                    <Radio.Button value={0} defaultChecked autoFocus>中国</Radio.Button>
+                                    <Radio.Button value={1}>美国</Radio.Button>
+                                    <Radio.Button value={2}>日本</Radio.Button>
+                                    <Radio.Button value={3}>欧盟</Radio.Button>
+                                </Radio.Group>
+                            </Col>
+                            <Col span={8}>
+
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={4}>输入框</Col>
+                            <Col span={8}>
+                                <Input addonBefore="前缀" addonAfter="后缀" placeholder="占位符" />
+                            </Col>
+                        </Row>
+
+                    </div>
+                </div>
+                <Divider />
                 <div className="antd-demo-box">
                     <h1>自动补全</h1>
                     <div className="antd-demo-content">
@@ -122,6 +181,7 @@ class AntdFormInput extends React.Component {
                             >
                                 {label}
                             </Checkbox>
+                            <Checkbox indeterminate={true}>全选</Checkbox>
                         </p>
                         <p>
                             <Button
@@ -183,7 +243,7 @@ class AntdFormInput extends React.Component {
                         具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。 <br />
                         排列方式：水平，垂直，行内
                     </p>
-                    <div className="antd-demo-cont">
+                    <div className="antd-demo-content">
 
                     </div>
                 </div>
@@ -235,35 +295,60 @@ class AntdFormInput extends React.Component {
                     <div className="antd-demo-content"></div>
                 </div>
                 <Divider />
-                <div className="antd-demo-">
+                <div className="antd-demo-box">
                     <h1>评分</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>
                 </div>
                 <Divider />
-                <div className="antd-demo-">
+                <div className="antd-demo-box">
                     <h1>单选</h1>
                     <p></p>
                     <div className="antd-demo-content">
-                        <Radio>
-                            苹果
-                        </Radio>
+                        <Radio.Group onChange={e => { console.log(e.target.value) }}>
+                            <Radio value={1} style={radioStyle}>
+                                苹果
+                            </Radio>
+                            <Radio value={2} style={radioStyle}>
+                                香蕉
+                            </Radio>
+                            <Radio value={3} disabled style={radioStyle}>
+                                橘子
+                            </Radio>
+                        </Radio.Group>
+                        <Radio.Group name="city" options={[{label: '北京', value: 0}, {label: '上海', value: 1}]} />
+                        <Radio.Group buttonStyle="solid" size="small">
+                            <Radio.Button value="a">日本</Radio.Button>
+                            <Radio.Button value="b">韩国</Radio.Button>
+                            <Radio.Button value="c">香港</Radio.Button>
+                        </Radio.Group>
                     </div>
                 </div>
                 <Divider />
-                <div className="antd-demo-">
+                <div className="antd-demo-box">
                     <h1>开关</h1>
                     <p></p>
-                    <div className="antd-demo-content"></div>
+                    <div className="antd-demo-content">
+                        <Switch defaultChecked loading checkedChildren="开" unCheckedChildren="关" onChange={checked => { console.log(`开关： ${checked}`) }} />
+                        <Switch
+                            defaultChecked
+                            disabled
+                            size="small"
+                            checkedChildren={<Icon type="check" />}
+                            unCheckedChildren={<Icon type="close" />}
+                            onChange={checked => { console.log(`开关： ${checked}`) }}
+                        />
+                        {/* <Switch defaultChecked onChange={checked => {console.log(`开关： ${checked}`)}} /> */}
+                    </div>
                 </div>
                 <Divider />
-                <div className="antd-demo-">
+                <div className="antd-demo-box">
                     <h1>滑块</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>
                 </div>
                 <Divider />
-                <div className="antd-demo-">
+                <div className="antd-demo-box">
                     <h1>选择框</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>

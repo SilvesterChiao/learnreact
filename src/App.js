@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import LayoutBox from './LayoutBox'
+import './mock/mock'
 
 class App extends React.Component {
     render() {

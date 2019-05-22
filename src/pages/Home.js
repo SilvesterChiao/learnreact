@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import Animal from './ReactBasic/Animal'
 
 // 内联样式
 var myStyle = {
@@ -396,6 +397,7 @@ function Home(props) {
             <FlavorForm />
             <hr/>
             <SearchStudent />
+            <Animal />
         </div>
     )
 }

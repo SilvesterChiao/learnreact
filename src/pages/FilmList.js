@@ -2,7 +2,8 @@ import React from 'react';
 import { Table } from 'antd';
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
 import "antd/dist/antd.css";
-import { data } from '../assets/scripts/data'
+import { movieList } from '../mock/movieList'
+import api from './../axios/api'
 
 
 const columns = [{
@@ -34,12 +35,21 @@ const columns = [{
 
 class FilmList extends React.Component {
     state = {
-        data
+        movieList
     };
 
+    componentDidMount() {
+        api.mockdata('/data/index')
+            .then(res => {
+                console.log(res);
+            })
+    }
+
     render() {
+        const { movieList } = this.state;
+        console.log(movieList)
         return (
-            <Table dataSource={this.state.data.film} columns={columns} rowKey="id" />
+            <Table dataSource={movieList.data.film} columns={columns} rowKey="id" />
         );
     }
 }
