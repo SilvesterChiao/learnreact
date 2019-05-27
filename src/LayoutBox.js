@@ -1,30 +1,32 @@
 import React from 'react';
-import { Route, NavLink } from "react-router-dom";
+import { Route, NavLink } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
-import './LayoutBox.css'
-import Home from './pages/Home'
-import Logo from './pages/Logo'
-import AntdDemo from './pages/AntdDemo'
-import AntdForm from './pages/AntdForm'
-import AntdMenu from './pages/AntdMenu'
-import AntdTable from './pages/AntdTable'
-import AntdData from './pages/AntdData'
-import AntdAlert from './pages/AntdAlert'
-import AntdFormInput from './pages/AntdFormInput'
-import FilmList from './pages/FilmList'
-import StudentList from './pages/StudentList'
-import MobxDemo from './pages/MobxDemo'
+import './LayoutBox.css';
+import Home from './pages/Home';
+import Logo from './pages/Logo';
+import AntdDemo from './pages/AntdDemo';
+import AntdForm from './pages/AntdForm';
+import AntdMenu from './pages/AntdMenu';
+import AntdTable from './pages/AntdTable';
+import AntdData from './pages/AntdData';
+import AntdAlert from './pages/AntdAlert';
+import AntdFormInput from './pages/AntdFormInput';
+import FilmList from './pages/FilmList';
+import StudentList from './pages/StudentList';
+import MobxDemo from './pages/MobxDemo';
 
-const {
-    Content, Sider, Footer
-} = Layout;
+const { Content, Sider, Footer } = Layout;
 
 function LayoutBox() {
     return (
         <Layout>
-            <Sider style={{
-                overflow: 'auto', height: '100vh', position: 'fixed', left: 0,
-            }}
+            <Sider
+                style={{
+                    overflow: 'auto',
+                    height: '100vh',
+                    position: 'fixed',
+                    left: 0,
+                }}
             >
                 <div className="logo" />
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
@@ -40,10 +42,15 @@ function LayoutBox() {
                             <span className="nav-text">Logo</span>
                         </NavLink>
                     </Menu.Item>
-                    <Menu.SubMenu key="antd" title={<span>
-                        <Icon type="mail" />
-                        <span>antd练习</span>
-                    </span>}>
+                    <Menu.SubMenu
+                        key="antd"
+                        title={
+                            <span>
+                                <Icon type="mail" />
+                                <span>antd练习</span>
+                            </span>
+                        }
+                    >
                         <Menu.Item key="3">
                             <NavLink to="/antd-demo">
                                 <Icon type="upload" />
@@ -86,14 +93,22 @@ function LayoutBox() {
                                 <span className="nav-text">antd交互</span>
                             </NavLink>
                         </Menu.Item>
-                        <Menu.Item key="10">
-                            <NavLink to="/film-list">
-                                <Icon type="team" />
-                                <span className="nav-text">antd综合</span>
-                            </NavLink>
-                        </Menu.Item>
+                        <Menu.ItemGroup title="antd综合" key="g1">
+                            <Menu.Item key="10">
+                                <NavLink to="/film-list">
+                                    <Icon type="team" />
+                                    <span className="nav-text">影片列表</span>
+                                </NavLink>
+                            </Menu.Item>
+                            <Menu.Item key="11">
+                                <NavLink to="/student-list">
+                                    <Icon type="team" />
+                                    <span className="nav-text">学生列表</span>
+                                </NavLink>
+                            </Menu.Item>
+                        </Menu.ItemGroup>
                     </Menu.SubMenu>
-                    <Menu.Item key="11">
+                    <Menu.Item key="mobx-1">
                         <NavLink to="/mobx-demo">
                             <Icon type="shop" />
                             <span className="nav-text">mobx实践</span>
@@ -105,7 +120,14 @@ function LayoutBox() {
                 {/* <Header style={{ background: '#fff', padding: 0 }}>
 
                 </Header> */}
-                <Content style={{ margin: '24px 16px 0', padding: '24px', overflow: 'initial', backgroundColor: '#fff' }}>
+                <Content
+                    style={{
+                        margin: '24px 16px 0',
+                        padding: '24px',
+                        overflow: 'initial',
+                        backgroundColor: '#fff',
+                    }}
+                >
                     <Route exact path="/" component={Home} />
                     <Route path="/logo" component={Logo} />
                     <Route path="/antd-demo" component={AntdDemo} />
@@ -124,7 +146,7 @@ function LayoutBox() {
                 </Footer>
             </Layout>
         </Layout>
-    )
+    );
 }
 
 export default LayoutBox;

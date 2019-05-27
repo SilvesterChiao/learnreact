@@ -1,41 +1,41 @@
-import React from 'react'
+import React from 'react';
 import {
     extendObservable,
     decorate,
     observable,
     computed,
     action,
-    autorun
-} from 'mobx'
-import { observer, inject } from 'mobx-react'
-import { Button, Input } from 'antd'
-import './TodoListLess.css'
+    autorun,
+} from 'mobx';
+import { observer, inject } from 'mobx-react';
+import { Button, Input } from 'antd';
+import './TodoListLess.css';
 
 class Todo {
     constructor(title) {
-        this.id = Math.random()
-        this.title = title
-        this.finished = false
+        this.id = Math.random();
+        this.title = title;
+        this.finished = false;
     }
 }
 
 decorate(Todo, {
     title: observable,
-    finished: observable
-})
+    finished: observable,
+});
 
 class TodoList {
-    @observable todos = []
+    @observable todos = [];
     // 未完成项目数
     @computed get unfinishedTodoCount() {
-        return this.todos.filter(todo => !todo.finished).length
+        return this.todos.filter(todo => !todo.finished).length;
     }
     @action addTodo(title) {
         return new Promise((resolve, reject) => {
-            let newTodo = new Todo(title)
-            this.todos.push(newTodo)
-            resolve()
-        })
+            let newTodo = new Todo(title);
+            this.todos.push(newTodo);
+            resolve();
+        });
     }
 }
 
@@ -43,27 +43,27 @@ class TodoList {
 @observer
 class TodoListView extends React.Component {
     state = {
-        todoTitle: ''
-    }
+        todoTitle: '',
+    };
     componentDidMount() {
-        console.log(this.props.AppStore.state.theme)
+        console.log(this.props.AppStore.state.theme);
     }
     handleChange = e => {
         this.setState({
-            todoTitle: e.target.value
-        })
-    }
+            todoTitle: e.target.value,
+        });
+    };
     handlePressEnter = () => {
         this.props.todoList.addTodo(this.state.todoTitle).then(() => {
             this.setState({
-                todoTitle: ''
-            })
-        })
-    }
+                todoTitle: '',
+            });
+        });
+    };
     render() {
         const {
-            state: { theme }
-        } = this.props.AppStore
+            state: { theme },
+        } = this.props.AppStore;
         return (
             <div className="todoList">
                 <Input
@@ -72,7 +72,7 @@ class TodoListView extends React.Component {
                     style={{ width: '280px' }}
                     placeholder="添加todo，回车确认"
                     onChange={e => {
-                        this.handleChange(e)
+                        this.handleChange(e);
                     }}
                     onPressEnter={this.handlePressEnter}
                 />
@@ -83,14 +83,14 @@ class TodoListView extends React.Component {
                 </ul>
                 Tasks left: {this.props.todoList.unfinishedTodoCount} || {theme}
             </div>
-        )
+        );
     }
 }
 
 @observer
 class TodoView extends React.Component {
     render() {
-        const { todo } = this.props
+        const { todo } = this.props;
         return (
             <li>
                 <input
@@ -100,25 +100,25 @@ class TodoView extends React.Component {
                 />
                 {todo.title}
             </li>
-        )
+        );
     }
 }
 
-const store = new TodoList()
+const store = new TodoList();
 
 class MobxDemoView extends React.Component {
     constructor() {
-        super()
+        super();
         extendObservable(this, {
-            count: 0
-        })
+            count: 0,
+        });
     }
     onIncrement = () => {
-        this.count++
-    }
+        this.count++;
+    };
     onDecrement = () => {
-        this.count--
-    }
+        this.count--;
+    };
     render() {
         return (
             <div>
@@ -137,8 +137,8 @@ class MobxDemoView extends React.Component {
                     <TodoListView todoList={store} />
                 </div>
             </div>
-        )
+        );
     }
 }
 
-export default observer(MobxDemoView)
+export default observer(MobxDemoView);
