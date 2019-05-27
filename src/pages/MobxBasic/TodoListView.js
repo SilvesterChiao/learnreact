@@ -9,7 +9,7 @@ import {
 } from 'mobx';
 import { observer, inject } from 'mobx-react';
 import { Button, Input } from 'antd';
-import './TodoListLess.css';
+import styles from './TodoListLess.module.css';
 
 class Todo {
     constructor(title) {
@@ -65,7 +65,7 @@ class TodoListView extends React.Component {
             state: { theme },
         } = this.props.AppStore;
         return (
-            <div className="todoList">
+            <div className={styles.todoList}>
                 <Input
                     autoFocus
                     value={this.state.todoTitle}
