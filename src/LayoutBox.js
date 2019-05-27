@@ -12,6 +12,7 @@ import AntdData from './pages/AntdData'
 import AntdAlert from './pages/AntdAlert'
 import AntdFormInput from './pages/AntdFormInput'
 import FilmList from './pages/FilmList'
+import StudentList from './pages/StudentList'
 import MobxDemo from './pages/MobxDemo'
 
 const {
@@ -115,6 +116,7 @@ function LayoutBox() {
                     <Route path="/antd-data" component={AntdData} />
                     <Route path="/antd-alert" component={AntdAlert} />
                     <Route path="/film-list" component={FilmList} />
+                    <Route path="/student-list" component={StudentList} />
                     <Route path="/mobx-demo" component={MobxDemo} />
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>

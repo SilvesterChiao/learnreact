@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import Animal from './ReactBasic/Animal'
+import axios from 'axios';
 
 // 内联样式
 var myStyle = {
@@ -237,6 +238,9 @@ class Content extends React.Component {
     componentDidMount() {
         // 在这里使用AJAX请求数据
         console.log('componentDidMount')
+        axios.get('http://127.0.0.1:3004/student/list').then(res => {
+            console.log(res)
+        })
     }
     componentWillReceiveProps(newProps) {
         console.log('componentWillReceiveProps')

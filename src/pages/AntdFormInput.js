@@ -285,6 +285,13 @@ class AntdFormInput extends React.Component {
                             <Password placeholder="请输入密码" />
                             <Search enterButton />
                             <TextArea rows={4} />
+                            <Input.Group>
+                                <Select defaultValue="1" style={{ width: '40%' }}>
+                                    <Option value="1">1</Option>
+                                    <Option value="2">1</Option>
+                                </Select>
+                                <Input style={{ width: '60%' }} />
+                            </Input.Group>
                         </div>
                     </div>
                 </div>
