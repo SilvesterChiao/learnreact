@@ -40,14 +40,12 @@ class TodoList {
 }
 
 @inject('AppStore')
+@inject('TodoListStore')
 @observer
 class TodoListView extends React.Component {
     state = {
         todoTitle: '',
     };
-    componentDidMount() {
-        console.log(this.props.AppStore.state.theme);
-    }
     handleChange = e => {
         this.setState({
             todoTitle: e.target.value,
@@ -60,12 +58,15 @@ class TodoListView extends React.Component {
             });
         });
     };
+    changeAppTheme = () => {
+        this.props.AppStore.state.theme = 'red';
+    };
     render() {
         const {
             state: { theme },
         } = this.props.AppStore;
         return (
-            <div className={styles.todoList}>
+            <div className={styles.todoList} style={{ color: theme }}>
                 <Input
                     autoFocus
                     value={this.state.todoTitle}

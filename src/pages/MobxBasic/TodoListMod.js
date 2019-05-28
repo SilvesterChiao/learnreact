@@ -1,16 +1,16 @@
-import { observable, action, runInAction, autorun } from 'mobx'
+import { observable, action, runInAction, autorun } from 'mobx';
 
-class AppStore {
+class TodoListMod {
     @observable state = {
         count: 0,
-        theme: '#3f3f3f'
-    }
+        theme: '#3f3f3f',
+    };
 
-    @action SetTheme = newTheme => {
-        this.theme = newTheme
-    }
+    @action setTheme = newTheme => {
+        this.theme = newTheme;
+    };
 }
 
-const appStore = new AppStore()
-export default appStore
-export { AppStore }
+const todoListMod = new TodoListMod();
+export default todoListMod;
+export { TodoListMod };

@@ -3,6 +3,7 @@ import { Route, NavLink } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 import './LayoutBox.css';
 import Home from './pages/Home';
+import Context from './pages/Context';
 import Logo from './pages/Logo';
 import AntdDemo from './pages/AntdDemo';
 import AntdForm from './pages/AntdForm';
@@ -15,7 +16,7 @@ import FilmList from './pages/FilmList';
 import StudentList from './pages/StudentList';
 import MobxDemo from './pages/MobxDemo';
 
-const { Content, Sider, Footer } = Layout;
+const { Content, Sider, Header, Footer } = Layout;
 
 function LayoutBox() {
     return (
@@ -34,6 +35,12 @@ function LayoutBox() {
                         <NavLink to="/">
                             <Icon type="user" />
                             <span className="nav-text">Home</span>
+                        </NavLink>
+                    </Menu.Item>
+                    <Menu.Item key="r-2">
+                        <NavLink to="/context">
+                            <Icon type="user" />
+                            <span className="nav-text">Context</span>
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="2">
@@ -117,9 +124,7 @@ function LayoutBox() {
                 </Menu>
             </Sider>
             <Layout style={{ marginLeft: 200 }}>
-                {/* <Header style={{ background: '#fff', padding: 0 }}>
-
-                </Header> */}
+                <Header style={{ background: '#fff', padding: 0 }} />
                 <Content
                     style={{
                         margin: '24px 16px 0',
@@ -129,6 +134,7 @@ function LayoutBox() {
                     }}
                 >
                     <Route exact path="/" component={Home} />
+                    <Route path="/context" component={Context} />
                     <Route path="/logo" component={Logo} />
                     <Route path="/antd-demo" component={AntdDemo} />
                     <Route path="/antd-form-input" component={AntdFormInput} />
