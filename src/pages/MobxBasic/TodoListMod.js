@@ -8,6 +8,9 @@ class TodoListMod {
 
     @action setTheme = newTheme => {
         this.theme = newTheme;
+        autorun(() => {
+            console.log(`新主题${newTheme}`)
+        })
     };
 }
 
