@@ -12,8 +12,8 @@ import {
 } from 'antd';
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
 import 'antd/dist/antd.css';
-import { movieList } from '../mock/movieList';
-import api from './../axios/api';
+import { movieList } from '../../mock/movieList';
+import api from '../../axios/api';
 import axios from 'axios';
 
 const { Column, ColumnGroup } = Table;

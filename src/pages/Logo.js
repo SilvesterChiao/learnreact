@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import { Button } from 'antd';
-import CustomTable from './CustomTable/CustomTable';
+import CustomTable from '../components/CustomTable/CustomTableView';
 import './Logo.css';
 import logo from '../assets/images/logo.svg';
 

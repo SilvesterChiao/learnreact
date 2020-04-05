@@ -13,7 +13,10 @@
 }
 
 .logo {
+    margin: 16px;
+    padding-left: 10px;
     height: 32px;
     background: rgba(255,255,255,.2);
-    margin: 16px;
+    line-height: 32px;
+    color: #f2f2f2;
 }

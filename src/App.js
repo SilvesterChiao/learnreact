@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LayoutBox from './LayoutBox';
+import LayoutBox from './components/Layout/LayoutView';
 import './mock/mock';
 
 // 修饰器

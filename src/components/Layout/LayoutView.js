@@ -1,20 +1,24 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
-import './LayoutBox.css';
-import Home from './pages/Home';
-import Context from './pages/Context';
-import Logo from './pages/Logo';
-import AntdDemo from './pages/AntdDemo';
-import AntdForm from './pages/AntdForm';
-import AntdMenu from './pages/AntdMenu';
-import AntdTable from './pages/AntdTable';
-import AntdData from './pages/AntdData';
-import AntdAlert from './pages/AntdAlert';
-import AntdFormInput from './pages/AntdFormInput';
-import FilmList from './pages/FilmList';
-import StudentList from './pages/StudentList';
-import MobxDemo from './pages/MobxDemo';
+import './LayoutStyle.css';
+// React练习
+import Home from '../../pages/Home';
+import Context from '../../pages/ReactBasic/Context';
+// React-router练习
+import Logo from '../../pages/Logo';
+// Antd练习
+import AntdDemo from '../../pages/AntdBasic/AntdDemo';
+import AntdForm from '../../pages/AntdBasic/AntdForm';
+import AntdMenu from '../../pages/AntdBasic/AntdMenu';
+import AntdTable from '../../pages/AntdBasic/AntdTable';
+import AntdData from '../../pages/AntdBasic/AntdData';
+import AntdAlert from '../../pages/AntdBasic/AntdAlert';
+import AntdFormInput from '../../pages/AntdBasic/AntdFormInput';
+import FilmList from '../../pages/AntdBasic/FilmList';
+import StudentList from '../../pages/AntdBasic/StudentList';
+// Mobx练习
+import MobxDemo from '../../pages/MobxBasic/MobxDemo';
 
 const { Content, Sider, Header, Footer } = Layout;
 
@@ -29,26 +33,48 @@ function LayoutBox() {
                     left: 0,
                 }}
             >
-                <div className="logo" />
+                <div className="logo">
+                    Learn React
+                </div>
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                    <Menu.Item key="1">
-                        <NavLink to="/">
-                            <Icon type="user" />
-                            <span className="nav-text">Home</span>
-                        </NavLink>
-                    </Menu.Item>
-                    <Menu.Item key="r-2">
-                        <NavLink to="/context">
-                            <Icon type="user" />
-                            <span className="nav-text">Context</span>
-                        </NavLink>
-                    </Menu.Item>
-                    <Menu.Item key="2">
-                        <NavLink to="/logo">
-                            <Icon type="video-camera" />
-                            <span className="nav-text">Logo</span>
-                        </NavLink>
-                    </Menu.Item>
+                    <Menu.SubMenu
+                        key="react"
+                        title={
+                            <span>
+                                <Icon type="mail" />
+                                <span>React</span>
+                            </span>
+                        }
+                    >
+                        <Menu.Item key="1">
+                            <NavLink to="/">
+                                <Icon type="user" />
+                                <span className="nav-text">Home</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-2">
+                            <NavLink to="/context">
+                                <Icon type="user" />
+                                <span className="nav-text">Context</span>
+                            </NavLink>
+                        </Menu.Item>
+                    </Menu.SubMenu>
+                    <Menu.SubMenu
+                        key="router"
+                        title={
+                            <span>
+                                <Icon type="mail" />
+                                <span>React-router</span>
+                            </span>
+                        }
+                    >
+                        <Menu.Item key="2">
+                            <NavLink to="/logo">
+                                <Icon type="video-camera" />
+                                <span className="nav-text">Logo</span>
+                            </NavLink>
+                        </Menu.Item>
+                    </Menu.SubMenu>
                     <Menu.SubMenu
                         key="antd"
                         title={
@@ -115,16 +141,28 @@ function LayoutBox() {
                             </Menu.Item>
                         </Menu.ItemGroup>
                     </Menu.SubMenu>
-                    <Menu.Item key="mobx-1">
-                        <NavLink to="/mobx-demo">
-                            <Icon type="shop" />
-                            <span className="nav-text">mobx实践</span>
-                        </NavLink>
-                    </Menu.Item>
+                    <Menu.SubMenu
+                        key="mobx"
+                        title={
+                            <span>
+                                <Icon type="mail" />
+                                <span>Mobx</span>
+                            </span>
+                        }
+                    >
+                        <Menu.Item key="mobx-1">
+                            <NavLink to="/mobx-demo">
+                                <Icon type="shop" />
+                                <span className="nav-text">mobx实践</span>
+                            </NavLink>
+                        </Menu.Item>
+                    </Menu.SubMenu>
                 </Menu>
             </Sider>
             <Layout style={{ marginLeft: 200 }}>
-                <Header style={{ background: '#fff', padding: 0 }} />
+                <Header style={{ background: '#fff', padding: '0 24px' }}>
+                    Header
+                </Header>
                 <Content
                     style={{
                         margin: '24px 16px 0',
