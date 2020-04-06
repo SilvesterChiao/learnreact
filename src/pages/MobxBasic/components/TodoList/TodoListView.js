@@ -5,7 +5,6 @@ import {
     observable,
     computed,
     action,
-    autorun,
 } from 'mobx';
 import { observer, inject } from 'mobx-react';
 import { Button, Input } from 'antd';
@@ -39,8 +38,7 @@ class TodoList {
     }
 }
 
-@inject('AppStore')
-@inject('TodoListStore')
+@inject('AppStore', 'TodoListStore')
 @observer
 class TodoListView extends React.Component {
     state = {
@@ -107,6 +105,7 @@ class TodoView extends React.Component {
 
 const store = new TodoList();
 
+@observer
 class MobxDemoView extends React.Component {
     constructor() {
         super();
@@ -142,4 +141,4 @@ class MobxDemoView extends React.Component {
     }
 }
 
-export default observer(MobxDemoView);
+export default MobxDemoView;

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
-import './LayoutStyle.css';
 // React练习
-import Home from '../../pages/Home';
+import Home from '../../pages/ReactBasic/Runoob/HomeView';
 import Context from '../../pages/ReactBasic/Context';
 // React-router练习
-import Logo from '../../pages/Logo';
+import Logo from '../../pages/RouterBasic/Logo';
 // Antd练习
 import AntdDemo from '../../pages/AntdBasic/AntdDemo';
 import AntdForm from '../../pages/AntdBasic/AntdForm';
@@ -19,6 +18,7 @@ import FilmList from '../../pages/AntdBasic/FilmList';
 import StudentList from '../../pages/AntdBasic/StudentList';
 // Mobx练习
 import MobxDemo from '../../pages/MobxBasic/MobxDemo';
+import './LayoutStyle.css';
 
 const { Content, Sider, Header, Footer } = Layout;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LayoutBox from './components/Layout/LayoutView';
-import './mock/mock';
+import '../../mock/mock';
+import LayoutBox from '../Layout/LayoutView';
 
 // 修饰器
 function testtable(isTesttable) {

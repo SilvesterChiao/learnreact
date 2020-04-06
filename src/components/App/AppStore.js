@@ -6,11 +6,6 @@ class AppStore {
         theme: '#3f3f3f',
     };
 
-    @action setVisible = async payload => {
-        runInAction(() => {
-            this.state.theme = payload.theme;
-        });
-    };
     @action setTheme = themeObj => {
         runInAction(() => {
             this.state.theme = themeObj.theme;
@@ -23,4 +18,3 @@ class AppStore {
 
 const appStore = new AppStore();
 export default appStore;
-export { AppStore };

@@ -11,6 +11,9 @@ function Toolbar(props) {
     );
 }
 
+/**
+ * Context
+ */
 class ThemedButton extends React.Component {
     // 指定 contextType 读取当前的 theme context。
     // React 会往上找到最近的 theme Provider，然后使用它的值。

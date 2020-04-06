@@ -2,8 +2,8 @@ import React from 'react';
 import { Table } from 'antd';
 // 由于 antd 组件的默认文案是英文，所以需要修改为中文
 import "antd/dist/antd.css";
-import { movieList } from '../../mock/movieList'
 import api from '../../axios/api'
+import { movieList } from '../../mock/movieList'
 
 
 const columns = [{

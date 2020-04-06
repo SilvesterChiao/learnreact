@@ -9,7 +9,7 @@ import {
 } from 'mobx';
 import { observer, inject } from 'mobx-react';
 import { Button, Input } from 'antd';
-import MobxDemoView from './TodoListView';
+import MobxDemoView from './components/TodoList/TodoListView';
 
 // class Todo {
 //     id = Math.random();

@@ -1,0 +1,11 @@
+/*
+ * @Author: fu.nan
+ * @Date: 2020-04-06 16:50:36
+ * @LastEditors: fu.nan
+ * @LastEditTime: 2020-04-06 16:58:25
+ */
+.component-wrapper {
+    margin-bottom: 16px;
+    padding: 10px 16px;
+    border: 1px solid darkolivegreen;
+}

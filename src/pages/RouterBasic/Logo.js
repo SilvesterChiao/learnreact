@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import { Button } from 'antd';
-import CustomTable from '../components/CustomTable/CustomTableView';
+import logo from '../../assets/images/logo.svg';
+import CustomTable from '../../components/CustomTable/CustomTableView';
 import './Logo.css';
-import logo from '../assets/images/logo.svg';
 
 function Topic({ match }) {
     return <h3>Requested Param: {match.params.id}</h3>;

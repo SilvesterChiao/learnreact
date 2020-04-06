@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Icon, Typography, Row, Col, Menu, Pagination, Steps, Divider, DatePicker, message } from 'antd';
+import "antd/dist/antd.css";
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import "antd/dist/antd.css";
 
 moment.locale('zh-cn');
 

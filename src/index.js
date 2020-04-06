@@ -5,11 +5,11 @@ import { LocaleProvider } from 'antd';
 import zh_TW from 'antd/lib/locale-provider/zh_TW';
 import moment from 'moment';
 import 'moment/locale/zh-hk';
-import './index.css';
-import App from './App';
-// import Layout from './LayoutBox';
+import './assets/styles/index.css';
+import './assets/styles/common.css';
+import App from './components/App/App';
+import * as stores from './stores';
 import * as serviceWorker from './serviceWorker';
-import * as stores from './stores/index';
 
 moment.locale('zh-hk');
 
