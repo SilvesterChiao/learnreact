@@ -16,7 +16,7 @@ import {
     Skeleton,
     Switch
 } from 'antd'
-import './AntdAlert.scss'
+import styles from './AntdAlert.module.scss'
 
 const { Option } = Select
 const onClose = e => {
@@ -161,7 +161,7 @@ class AntdAlert extends React.Component {
                     </div>
                 </div>
                 <Divider />
-                <div className="antd-demo-box demo">
+                <div className={`antd-demo-box ${styles.demo}`}>
                     <h1>drawer-抽屉</h1>
                     <p />
                     <div className="antd-demo-content">
