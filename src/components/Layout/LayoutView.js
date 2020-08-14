@@ -18,7 +18,7 @@ import FilmList from '../../pages/AntdBasic/FilmList';
 import StudentList from '../../pages/AntdBasic/StudentList';
 // Mobx练习
 import MobxDemo from '../../pages/MobxBasic/MobxDemo';
-import './LayoutStyle.css';
+import styles from './LayoutStyle.module.scss';
 
 const { Content, Sider, Header, Footer } = Layout;
 
@@ -33,7 +33,7 @@ function LayoutBox() {
                     left: 0,
                 }}
             >
-                <div className="logo">
+                <div className={styles.logo}>
                     Learn React
                 </div>
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>

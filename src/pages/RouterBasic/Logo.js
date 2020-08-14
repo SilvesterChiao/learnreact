@@ -3,7 +3,7 @@ import { Link, Route } from 'react-router-dom';
 import { Button } from 'antd';
 import logo from '../../assets/images/logo.svg';
 import CustomTable from '../../components/CustomTable/CustomTableView';
-import './Logo.css';
+import styles from './Logo.module.scss';
 
 function Topic({ match }) {
     return <h3>Requested Param: {match.params.id}</h3>;
@@ -36,7 +36,7 @@ class LogoEdit extends React.Component {
 function Logo({ match }) {
     return (
         <div>
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} className={styles['App-logo']} alt="logo" />
             <h2>Topics</h2>
             <CustomTable title="标题" />
 

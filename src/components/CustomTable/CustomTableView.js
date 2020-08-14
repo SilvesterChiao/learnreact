@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './CustomTable.module.css';
+import styles from './CustomTable.module.scss';
 
 class CustomTable extends Component {
     render() {

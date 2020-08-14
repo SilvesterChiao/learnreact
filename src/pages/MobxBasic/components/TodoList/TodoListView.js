@@ -8,7 +8,9 @@ import {
 } from 'mobx';
 import { observer, inject } from 'mobx-react';
 import { Button, Input } from 'antd';
-import styles from './TodoListLess.module.css';
+import styles from './TodoListLess.module.scss';
+
+console.log(styles);
 
 class Todo {
     constructor(title) {

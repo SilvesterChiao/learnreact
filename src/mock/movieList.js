@@ -1,5 +1,4 @@
 import Mock from 'mockjs';
-import CreateData from '../utils/createData'
 const Random = Mock.Random
 
 // 扩展方法
@@ -39,8 +38,6 @@ var template = {
         }
     ]
 }
-
-console.log(CreateData)
 
 var movieList = {
     data: Mock.mock(template)
