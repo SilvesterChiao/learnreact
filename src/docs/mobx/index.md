@@ -1,7 +1,7 @@
 <!--
- * @Author: fu.nan
+ * @Author: SilvesterChiao
  * @Date: 2020-04-05 11:36:10
- * @LastEditors: fu.nan
+ * @LastEditors: SilvesterChiao
  * @LastEditTime: 2020-04-05 17:42:45
  -->
 # Mobx

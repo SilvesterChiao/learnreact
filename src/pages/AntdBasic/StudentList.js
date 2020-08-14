@@ -16,7 +16,7 @@ import axios from 'axios';
 import api from '../../axios/api';
 import { movieList } from '../../mock/movieList';
 
-const { Column, ColumnGroup } = Table;
+const { Column } = Table;
 
 class StudentList extends React.Component {
     state = {
@@ -252,12 +252,9 @@ class StudentList extends React.Component {
                         key="Action"
                         render={(text, record) => (
                             <span>
-                                <a
-                                    href="javascript:;"
-                                    onClick={e => this.showModal(record.id, e)}
-                                >
+                                <Button onClick={e => this.showModal(record.id, e)}>
                                     修改
-                                </a>
+                                </Button>
                                 <Divider type="vertical" />
                                 <Popconfirm
                                     title="确认删除此条数据？"
@@ -265,7 +262,7 @@ class StudentList extends React.Component {
                                         this.deleteOneStudent(record.id, e);
                                     }}
                                 >
-                                    <a href="javascript:;">删除</a>
+                                    <Button>删除</Button>
                                 </Popconfirm>
                             </span>
                         )}

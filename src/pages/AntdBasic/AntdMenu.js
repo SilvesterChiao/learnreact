@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Divider, Avatar, } from 'antd'
+import { Avatar, } from 'antd'
 
 class AntdData extends React.Component {
     render(){
