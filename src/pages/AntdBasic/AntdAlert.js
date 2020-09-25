@@ -16,7 +16,6 @@ import {
     Skeleton,
     Switch
 } from 'antd'
-import styles from './AntdAlert.module.scss'
 
 const { Option } = Select
 const onClose = e => {
@@ -131,7 +130,7 @@ class AntdAlert extends React.Component {
     render() {
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>alert-警告提示</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -160,8 +159,7 @@ class AntdAlert extends React.Component {
                         />
                     </div>
                 </div>
-                <Divider />
-                <div className={`antd-demo-box ${styles.demo}`}>
+                <div className={`component-wrapper`}>
                     <h1>drawer-抽屉</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -191,8 +189,7 @@ class AntdAlert extends React.Component {
                         </Drawer>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>modal-对话框</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -212,8 +209,7 @@ class AntdAlert extends React.Component {
                         </Modal>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>message-全局提示</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -222,8 +218,7 @@ class AntdAlert extends React.Component {
                         </Button>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>nitification-通知提醒框</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -247,8 +242,7 @@ class AntdAlert extends React.Component {
                         </Button>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>progress-进度条</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -286,8 +280,7 @@ class AntdAlert extends React.Component {
                         />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>popconfirm-气泡确认框</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -309,8 +302,7 @@ class AntdAlert extends React.Component {
                         </Popconfirm>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>spin-加载中</h1>
                     <p />
                     <div className="antd-demo-content">
@@ -358,8 +350,7 @@ class AntdAlert extends React.Component {
                         />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>skeleton-骨架屏</h1>
                     <p />
                     <div className="antd-demo-content">

@@ -2,11 +2,11 @@
  * @Author: SilvesterChiao
  * @Date: 2020-04-05 17:09:31
  * @LastEditors: SilvesterChiao
- * @LastEditTime: 2020-04-05 17:43:09
+ * @LastEditTime: 2020-08-14 17:41:51
  -->
 # create-react-app
 
-## 参考文献
+## 参考文档
 
 1. [Create React App 中文文档](https://www.html.cn/create-react-app/)
 1. [基于 create-react-app 的再配置](https://www.cnblogs.com/xiaohuochai/p/8491055.html)

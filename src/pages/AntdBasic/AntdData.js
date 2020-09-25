@@ -46,7 +46,7 @@ class AntdMenu extends React.Component {
     render() {
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>avatar-头像</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -62,28 +62,22 @@ class AntdMenu extends React.Component {
                         </Badge>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>badge-徽记</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>comment-评论</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>collapse-折叠面板</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>carousel-走马灯</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>card-卡片</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>calendar-日历</h1>
                     <div className="antd-demo-content">
                         <div className="calendar-box" style={{ width: 300, border: '1px solid #d9d9d9', borderRadius: 4 }}>
@@ -94,8 +88,7 @@ class AntdMenu extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>empty-空状态</h1>
                     <div className="antd-demo-content">
                         <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
@@ -112,8 +105,7 @@ class AntdMenu extends React.Component {
                         </Empty>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>list-列表</h1>
                     <div className="antd-demo-content">
                         <List size="small" header={<div>Header</div>} footer={<div>footer</div>} bordered dataSource={ListData} renderItem={item => (
@@ -123,8 +115,7 @@ class AntdMenu extends React.Component {
                         )}></List>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>popover-气泡卡片</h1>
                     <div className="antd-demo-content">
                         <Popover title="气泡卡片" content={content} placement="bottomLeft" trigger="click" arrowPointAtCenter>
@@ -132,11 +123,10 @@ class AntdMenu extends React.Component {
                         </Popover>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>statistic</h1>
                     <p></p>
-                    <div className="antd-demo-box">
+                    <div className="component-wrapper">
                         <Statistic title="Active Users" value={112122} precision={2} />
                         <Card>
                             <Statistic title="Active" value={11.23} precision={2} valueStyle={{ color: '#3f8600' }} prefix={<Icon type="arrow-up" />} suffix="%" />
@@ -146,8 +136,7 @@ class AntdMenu extends React.Component {
                         <Statistic.Countdown title="天" value={deadline} format="D 天 H 时 m 分 s 秒" />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>tooltip-文字提示</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -162,8 +151,7 @@ class AntdMenu extends React.Component {
                         </Tooltip>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>timelie-时间轴</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -177,7 +165,7 @@ class AntdMenu extends React.Component {
                         </Timeline>
                     </div>
                 </div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>标签</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -186,8 +174,7 @@ class AntdMenu extends React.Component {
                         <Tag.CheckableTag checked={this.state.tagChecked} onChange={this.handleTagChange}>可选标签</Tag.CheckableTag>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>tab-标签页</h1>
                     <div className="antd-demo-content">
                         <Tabs type="card" defaultActiveKey="1" tabPosition="top" onChange={this.handleTabsChanage} style={{ height: '220px' }} tabBarExtraContent={operations}>

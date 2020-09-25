@@ -31,7 +31,7 @@ class Animal extends Component {
     render(){
         const { dogCount, catCount } = this.state;
         return (
-            <div>
+            <div className="component-wrapper">
                 <Dog count={dogCount} addDog={this.addDog} />
                 <Cat count={catCount} addCat={this.addCat} />
             </div>

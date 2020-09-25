@@ -4,6 +4,7 @@ import { Layout, Menu, Icon } from 'antd';
 // React练习
 import Home from '../../pages/ReactBasic/Runoob/HomeView';
 import Context from '../../pages/ReactBasic/Context';
+import HOCView from '../../pages/ReactBasic/HOC';
 // React-router练习
 import Logo from '../../pages/RouterBasic/Logo';
 // Antd练习
@@ -56,6 +57,12 @@ function LayoutBox() {
                             <NavLink to="/context">
                                 <Icon type="user" />
                                 <span className="nav-text">Context</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-3">
+                            <NavLink to="/hoc">
+                                <Icon type="user" />
+                                <span className="nav-text">HOCView</span>
                             </NavLink>
                         </Menu.Item>
                     </Menu.SubMenu>

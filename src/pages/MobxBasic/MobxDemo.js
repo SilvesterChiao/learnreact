@@ -177,7 +177,7 @@ class MobxDemo extends React.Component {
         } = this.props.AppStore;
         return (
             <div>
-                <div style={{ marginBottom: '16px' }}>
+                <div className="component-wrapper" style={{ marginBottom: '16px' }}>
                     <p style={{ marginBottom: '10px' }}>{this.count}</p>
                     <Button.Group>
                         <Button type="primary" onClick={this.onIncrement}>
@@ -188,7 +188,7 @@ class MobxDemo extends React.Component {
                         </Button>
                     </Button.Group>
                 </div>
-                <div>
+                <div className="component-wrapper">
                     <TodoListView todoList={store} />
                 </div>
                 <MobxDemoView />

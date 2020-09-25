@@ -10,8 +10,6 @@ import { observer, inject } from 'mobx-react';
 import { Button, Input } from 'antd';
 import styles from './TodoListLess.module.scss';
 
-console.log(styles);
-
 class Todo {
     constructor(title) {
         this.id = Math.random();

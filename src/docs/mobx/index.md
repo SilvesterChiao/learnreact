@@ -2,7 +2,7 @@
  * @Author: SilvesterChiao
  * @Date: 2020-04-05 11:36:10
  * @LastEditors: SilvesterChiao
- * @LastEditTime: 2020-04-05 17:42:45
+ * @LastEditTime: 2020-08-14 17:42:12
  -->
 # Mobx
 
@@ -27,7 +27,7 @@ isTypeScriptEnabled && [
 ],
 ```
 
-## 参考文献
+## 参考文档
 
 1. [MobX中文文档](https://cn.mobx.js.org/)
 1. [构建大型 Mobx 应用的几个建议](https://zhuanlan.zhihu.com/p/54291246)

@@ -6,6 +6,6 @@
  -->
 # React-router
 
-## 参考文献
+## 参考文档
 
 1. [React Router 中文文档](http://react-guide.github.io/react-router-cn/index.html)

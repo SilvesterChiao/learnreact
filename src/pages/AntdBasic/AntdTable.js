@@ -162,8 +162,8 @@ const rowSelection = {
 };
 
 class UserTable extends React.Component {
-    constructor(props) {
-        super(props)
+    constructor(...props) {
+        super(...props)
         this.state = {
             title: '用户列表',
             loading: false,
@@ -436,7 +436,7 @@ class AntdTable extends React.Component {
     render() {
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>表格</h1>
                     <p>
                     </p>
@@ -444,8 +444,7 @@ class AntdTable extends React.Component {
                         <Table columns={columns} dataSource={data} onChange={onChange} rowSelection={rowSelection} />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>jsx风格</h1>
                     <div className="antd-demo-content">
                         <UserTableForm />

@@ -519,7 +519,7 @@ class AntdForm extends React.Component {
     render() {
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>水平表单</h1>
                     <p>
                         水平登录栏，常用于顶部导航中
@@ -528,22 +528,19 @@ class AntdForm extends React.Component {
                         <WrappedHorizontalLoginForm />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>登录表单</h1>
                     <div className="antd-demo-content" style={{ width: '300px' }}>
                         <WrappedNormalLoginForm />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>注册表单</h1>
                     <div className="antd-demo-content" style={{ width: '500px' }}>
                         <WrappedRegistrationForm />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>动态表单</h1>
                     <div className="antd-demo-content">
                         <WrappedDynamicFieldSet />

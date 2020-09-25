@@ -104,7 +104,7 @@ class AntdFormInput extends React.Component {
         };
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>综合练习</h1>
                     <div className="antd-demo-content">
                         <Row>
@@ -157,8 +157,7 @@ class AntdFormInput extends React.Component {
 
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>自动补全</h1>
                     <div className="antd-demo-content">
                         <AutoComplete
@@ -169,8 +168,7 @@ class AntdFormInput extends React.Component {
                         />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>多选框</h1>
                     <div className="antd-demo-content">
                         <p style={{ marginBottom: '20px' }}>
@@ -202,16 +200,14 @@ class AntdFormInput extends React.Component {
                         </p>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>级联选择</h1>
                     <p></p>
                     <div className="antd-demo-content">
                         <Cascader size="small" defaultValue={['zhejiang', 'hangzhou', 'xihu']} options={cascaderOptions} onChange={onCascaderChange} placeholder="Please select" changeOnSelect showSearch={cascaderFilter} />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>日期选择框</h1>
                     <p>
                         默认为es-US，分别设置antd和moment
@@ -236,8 +232,7 @@ class AntdFormInput extends React.Component {
                         <RangePicker placeholder={['开始时间', '结束时间']} showTime={{ format: 'HH:mm' }} format="YYYY-MM-DD HH:mm" ranges={{ Today: [moment(), moment()], 'This Month': [moment().startOf('month'), moment().endOf('month')] }} />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>表单</h1>
                     <p>
                         具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。 <br />
@@ -247,8 +242,7 @@ class AntdFormInput extends React.Component {
 
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>数字输入框</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -268,8 +262,7 @@ class AntdFormInput extends React.Component {
                         />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>输入框</h1>
                     <p></p>
                     <div className="antd-demo-content" style={{ width: '400px' }}>
@@ -295,20 +288,17 @@ class AntdFormInput extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>提及</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>评分</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>单选</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -331,8 +321,7 @@ class AntdFormInput extends React.Component {
                         </Radio.Group>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>开关</h1>
                     <p></p>
                     <div className="antd-demo-content">
@@ -348,14 +337,12 @@ class AntdFormInput extends React.Component {
                         {/* <Switch defaultChecked onChange={checked => {console.log(`开关： ${checked}`)}} /> */}
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>滑块</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>选择框</h1>
                     <p></p>
                     <div className="antd-demo-content"></div>

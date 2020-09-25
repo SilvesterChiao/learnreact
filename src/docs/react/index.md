@@ -6,7 +6,7 @@
  -->
 # React
 
-## 参考文献
+## 参考文档
 
 1. [React中文文档](https://react.docschina.org/)
 1. [React 中 setState 修改深层对象](https://www.jianshu.com/p/c6343ddd313d?tdsourcetag=s_pctim_aiomsg)

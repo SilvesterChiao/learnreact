@@ -37,7 +37,7 @@ class AntdDemo extends React.Component {
         const { date } = this.state;
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>示例</h1>
                     <div className="antd-demo-content">
                         <div>
@@ -48,8 +48,7 @@ class AntdDemo extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>Button</h1>
                     <div className="antd-demo-content">
                         <Button.Group size="small">
@@ -65,8 +64,7 @@ class AntdDemo extends React.Component {
                         <Button type="primary" icon="download" shape="round" ghost>下载</Button>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>Icon</h1>
                     <p>可以使用svg和Iconfont</p>
                     <div className="antd-demo-content">
@@ -81,8 +79,7 @@ class AntdDemo extends React.Component {
                         <Icon type="check-circle" theme="twoTone" twoToneColor="#52c41a" />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>Typography</h1>
                     <p>排版</p>
                     <div className="antd-demo-content">
@@ -110,8 +107,7 @@ class AntdDemo extends React.Component {
                         </Typography>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>栅格</h1>
                     <p>栅格布局</p>
                     <div className="antd-demo-content"></div>
@@ -126,8 +122,7 @@ class AntdDemo extends React.Component {
                         </Row>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>Layout</h1>
                     <p>
                         布局
@@ -143,20 +138,16 @@ class AntdDemo extends React.Component {
 
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>固钉</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>面包屑</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>下拉菜单</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>导航</h1>
                     <p>顶部导航，侧边导航，内嵌菜单（收缩，手风琴）</p>
                     <div className="antd-demo-content">
@@ -188,20 +179,17 @@ class AntdDemo extends React.Component {
                         </Menu>
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>分页</h1>
                     <p>总数，每页数，迷你，简洁，默认页，显示切换pageSize，显示跳转，显示总数</p>
                     <div className="antd-demo-content">
                         <Pagination size="small" defaultCurrent={1} total={500} simple showSizeChanger showQuickJumper />
                     </div>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>页头</h1>
                 </div>
-                <Divider />
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>步骤条</h1>
                     <p></p>
                     <div className="antd-demo-content">

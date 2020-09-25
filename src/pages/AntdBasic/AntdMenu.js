@@ -5,7 +5,7 @@ class AntdData extends React.Component {
     render(){
         return (
             <div>
-                <div className="antd-demo-box">
+                <div className="component-wrapper">
                     <h1>头像</h1>
                     <p></p>
                     <div className="antd-demo-content">
