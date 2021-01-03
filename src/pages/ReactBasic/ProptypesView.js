@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import hoc from '../../components/HOC/HOC'
 
-@hoc
-class HOCView extends Component {
+class ProptypesView extends Component {
     constructor (props) {
         super(props)
         this.state = {}
@@ -11,10 +9,10 @@ class HOCView extends Component {
     render() {
         return (
             <div>
-                123
+                PropTypes
             </div>
         );
     }
 }
 
-export default HOCView;
+export default ProptypesView;

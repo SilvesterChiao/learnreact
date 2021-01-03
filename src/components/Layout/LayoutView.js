@@ -2,9 +2,15 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 // React练习
-import Home from '../../pages/ReactBasic/Runoob/HomeView';
-import Context from '../../pages/ReactBasic/Context';
-import HOCView from '../../pages/ReactBasic/HOC';
+import HomeView from '../../pages/ReactBasic/HomeView';
+import ContextView from '../../pages/ReactBasic/ContextView';
+import HOCView from '../../pages/ReactBasic/HOCView';
+import JsxView from '../../pages/ReactBasic/JsxView';
+import HooksView from '../../pages/ReactBasic/HooksView';
+import LifecycleView from '../../pages/ReactBasic/LifecycleView';
+import MixinsView from '../../pages/ReactBasic/MixinsView';
+import ProptypesView from '../../pages/ReactBasic/ProptypesView';
+import RefsView from '../../pages/ReactBasic/RefsView';
 // React-router练习
 import Logo from '../../pages/RouterBasic/Logo';
 // Antd练习
@@ -20,6 +26,7 @@ import StudentList from '../../pages/AntdBasic/StudentList';
 // Mobx练习
 import MobxDemo from '../../pages/MobxBasic/MobxDemo';
 import styles from './LayoutStyle.module.scss';
+import HOC from '../HOC/HOC';
 
 const { Content, Sider, Header, Footer } = Layout;
 
@@ -50,7 +57,7 @@ function LayoutBox() {
                         <Menu.Item key="1">
                             <NavLink to="/">
                                 <Icon type="user" />
-                                <span className="nav-text">Home</span>
+                                <span className="nav-text">React 基础</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item key="r-2">
@@ -62,7 +69,43 @@ function LayoutBox() {
                         <Menu.Item key="r-3">
                             <NavLink to="/hoc">
                                 <Icon type="user" />
-                                <span className="nav-text">HOCView</span>
+                                <span className="nav-text">高阶组件</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-4">
+                            <NavLink to="/jsx">
+                                <Icon type="user" />
+                                <span className="nav-text">JSX</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-5">
+                            <NavLink to="/hooks">
+                                <Icon type="user" />
+                                <span className="nav-text">Hooks</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-6">
+                            <NavLink to="/lifecycle">
+                                <Icon type="user" />
+                                <span className="nav-text">生命周期</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-7">
+                            <NavLink to="/mixins">
+                                <Icon type="user" />
+                                <span className="nav-text">Mixins</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-8">
+                            <NavLink to="/proptypes">
+                                <Icon type="user" />
+                                <span className="nav-text">PropTypes</span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="r-9">
+                            <NavLink to="/refs">
+                                <Icon type="user" />
+                                <span className="nav-text">Refs</span>
                             </NavLink>
                         </Menu.Item>
                     </Menu.SubMenu>
@@ -178,9 +221,19 @@ function LayoutBox() {
                         backgroundColor: '#fff',
                     }}
                 >
-                    <Route exact path="/" component={Home} />
-                    <Route path="/context" component={Context} />
+                    {/* react 基础 */}
+                    <Route exact path="/" component={HomeView} />
+                    <Route path="/context" component={ContextView} />
+                    <Route path="/hoc" component={HOCView} />
+                    <Route path="/jsx" component={JsxView} />
+                    <Route path="/hooks" component={HooksView} />
+                    <Route path="/lifecycle" component={LifecycleView} />
+                    <Route path="/mixins" component={MixinsView} />
+                    <Route path="/proptypes" component={ProptypesView} />
+                    <Route path="/refs" component={RefsView} />
+                    {/* react-router */}
                     <Route path="/logo" component={Logo} />
+                    {/* antd */}
                     <Route path="/antd-demo" component={AntdDemo} />
                     <Route path="/antd-form-input" component={AntdFormInput} />
                     <Route path="/antd-form" component={AntdForm} />
@@ -190,6 +243,7 @@ function LayoutBox() {
                     <Route path="/antd-alert" component={AntdAlert} />
                     <Route path="/film-list" component={FilmList} />
                     <Route path="/student-list" component={StudentList} />
+                    {/* mobx */}
                     <Route path="/mobx-demo" component={MobxDemo} />
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>

@@ -2,9 +2,44 @@
  * @Author: SilvesterChiao
  * @Date: 2020-04-05 17:09:38
  * @LastEditors: SilvesterChiao
- * @LastEditTime: 2020-04-05 17:42:53
+ * @LastEditTime: 2020-12-27 15:25:00
  -->
 # React
+
+## 简介
+
+## MVC、MV* 和 MVVM
+
+## 与 Vue 对比
+
+## React 基础
+
+1. [JSX](./jsx.md)
+1. [组件](./component.md)
+1. [高阶组件](./hoc.md)
+1. [context](./context.md)
+1. [diff](./diff.md)
+1. [fragments](./fragments.md)
+1. [hooks](./hook.md)
+1. [生命周期](./lifecycle.md)
+1. [proptypes](./proptypes.md)
+1. [reactdom](./reactdom.md)
+1. [refs](./refs.md)
+1. [render](./render.md)
+
+## 面试题
+
+1. 虚拟 DOM
+1. diff 算法
+1. 高阶函数
+1. 受控组件和非受控组件
+1. ref
+1. 生命周期
+1. 优化方式
+1. setState
+1. 组件通信
+1. hooks
+1. key
 
 ## 参考文档
 
